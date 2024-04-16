@@ -26,7 +26,7 @@
 .light {
   --color-bg-primary: #ffffff;
   /* added */
-  --color-bg-primary: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  --color-bg-primaryy: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
   /* added */
   --color-bg-secondary: #edf2f7;
   --color-text-primary: #2d3748;
