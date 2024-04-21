@@ -2,13 +2,15 @@
 import Navbar from "@Components/Navbar";
 import { ThemeProvider } from "@context/ThemeContext";
 import Image from "next/image";
-import Homee from "./pages/Home/page.jsx";
+import Home from "./pages/Home/page.jsx";
 import SingIn from "./pages/SingIn/page";
 import SingUp from "./pages/SingUp/page.jsx";
 import Account from "./pages/Account/page.jsx";
 import axios from "axios";
 import { useEffect, useState } from "react";
-export default function Home() {
+import Footer from "@Components/Fotter.jsx";
+
+export default function app() {
   const [coins, setCoins] = useState([]);
 
 
@@ -25,11 +27,11 @@ export default function Home() {
 
   return (
     <ThemeProvider>
-      <Navbar />
-      <Homee coins={coins} />
-      <SingIn />
-      <SingUp />
+      {/* <Navbar /> */}
+      <Home coins={coins} />
       <Account />
+      {/* <Footer /> */}
+
     </ThemeProvider >
   );
 }

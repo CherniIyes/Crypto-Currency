@@ -1,8 +1,11 @@
 import axios from 'axios';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+
 
 const Trending = () => {
       const [trending, setTrending] = useState([]);
+
 
       const url = 'https://api.coingecko.com/api/v3/search/trending';
       // Fetch Trending Coins Data from API
@@ -15,8 +18,10 @@ const Trending = () => {
       }, [])
 
 
-
+      // console.log(cName);
       return (
+
+
             <div className='rounded-div my-12 py-8 text-primary '>
 
                   <h1 className='text-2xl font-bold pb-5 px-4'>Trending Flous</h1>
@@ -24,12 +29,12 @@ const Trending = () => {
 
                   <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
                         {trending.map((coin) => (
-                              <div className='rounded-div flex items-center justify-between p-4 hover:scale-105 ease-in-out duration-300'>
+                              <div className='rounded-div flex items-center justify-between p-4 hover:scale-105 ease-in-out duration-300' >
 
                                     <div className='flex items-center'>
                                           <img className='rounded-full' src={coin.item.small} alt="/" />
                                           <div className='flex-col items-center mx-4'>
-                                                <p className='font-bold '>{coin.item.name}</p>
+                                                <p className='font-bold' >{coin.item.name}</p>
                                                 <p>{coin.item.symbol}</p>
                                           </div>
                                     </div>
@@ -44,6 +49,7 @@ const Trending = () => {
                   </div>
             </div>
       )
+
 }
 
 export default Trending
