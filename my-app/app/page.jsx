@@ -1,14 +1,10 @@
 "use client"
-import Navbar from "@Components/Navbar";
-import { ThemeProvider } from "@context/ThemeContext";
-import Image from "next/image";
-import Home from "./pages/Home/page.jsx";
-import SingIn from "./pages/SingIn/page";
-import SingUp from "./pages/SingUp/page.jsx";
-import Account from "./pages/Account/page.jsx";
-import axios from "axios";
 import { useEffect, useState } from "react";
-import Footer from "@Components/Fotter.jsx";
+import Image from "next/image";
+import axios from "axios";
+import Home from "./pages/Home/page.jsx";
+import { AuthContextProvider } from "@context/AuthContext.jsx";
+import { ThemeProvider } from "@context/ThemeContext";
 
 export default function app() {
   const [coins, setCoins] = useState([]);
@@ -27,11 +23,9 @@ export default function app() {
 
   return (
     <ThemeProvider>
-      {/* <Navbar /> */}
-      <Home coins={coins} />
-      <Account />
-      {/* <Footer /> */}
-
+      <AuthContextProvider>
+        <Home coins={coins} />
+      </AuthContextProvider >
     </ThemeProvider >
   );
 }
