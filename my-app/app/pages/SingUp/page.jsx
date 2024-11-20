@@ -11,17 +11,17 @@ const SingUp = () => {
 
       // const signup = UserAuth();
       const router = useRouter();
-      const handleSubmit = async (e) => {
-            e.preventDefault()
-            setError('')
-            try {
-                  await signup(email, password)
-                  router.push('/pages/Account')
-            } catch (e) {
-                  setError(e.message)
-                  console.log(e.message)
-            }
-      }
+      // const handleSubmit = async (e) => {
+      //       e.preventDefault()
+      //       setError('')
+      //       try {
+      //             await signup(email, password)
+      //             router.push('/pages/Account')
+      //       } catch (e) {
+      //             setError(e.message)
+      //             console.log(e.message)
+      //       }
+      // }
 
       return (
             <div>
@@ -49,7 +49,9 @@ const SingUp = () => {
 
                               </div>
 
-                              <button className='w-full my-2 p-3 bg-button text-btnText rounded-xl shadow-xl' onClick={handleSubmit}>Sing up</button>
+                              <button className='w-full my-2 p-3 bg-button text-btnText rounded-xl shadow-xl' 
+                              // onClick={handleSubmit}
+                              >Sing up</button>
                         </form>
                         <p className='text-center mt-3'>Already Have Account ? <Link className='font-bold text-accent' href="/pages/SingIn">
                               Sing in!
