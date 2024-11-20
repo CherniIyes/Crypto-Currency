@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 const CoinSearch = ({ coins = [] }) => {
       const [searchText, setSearchText] = useState('');
 
