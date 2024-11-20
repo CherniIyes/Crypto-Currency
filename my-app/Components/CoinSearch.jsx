@@ -1,14 +1,17 @@
-"use client"
-import React, { useState } from "react";
-import Template from "./Template";
+import React, { useState } from 'react'
+import Image from 'next/image';
+import Template from './Template';
 
 const CoinSearch = ({ coins = [] }) => {
       const [searchText, setSearchText] = useState('');
 
+      console.log("search", coins);
       return (
+
             <div className='rounded-div my-4'>
+
                   <div className='flex flex-col md:flex-row justify-between pt-4 pb-6 text-center md:text-right'>
-                        <h1 className='text-2xl font-bold my-2'>Search in Flousy-Byc</h1>
+                        <h1 className='text-2xl font-bold my-2'>Search Flousy</h1>
                         <form>
                               <input
                                     onChange={(e) => setSearchText(e.target.value)}
@@ -18,6 +21,9 @@ const CoinSearch = ({ coins = [] }) => {
                               />
                         </form>
                   </div>
+
+
+
 
                   <table className='w-full border-collapse text-center'>
                         <thead>
@@ -45,12 +51,22 @@ const CoinSearch = ({ coins = [] }) => {
                                           }
                                     })
                                     .map((coin) => (
-                                          <Template key={coin.id} coin={coin} />
+
+                                          < Template key={coin.id} coin={coin} />
+
                                     ))}
                         </tbody>
                   </table>
-            </div>
-      );
-};
 
-export default CoinSearch;
+
+
+
+
+
+
+            </div>
+      )
+
+}
+
+export default CoinSearch
