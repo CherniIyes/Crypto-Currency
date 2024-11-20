@@ -15,14 +15,14 @@ const Navbar = () => {
             setNav(!nav);
       };
 
-      const handleSignOut = async () => {
-            try {
-                  await logout();
-                  router.push('/')
-            } catch (e) {
-                  console.log(e.message);
-            }
-      };
+      // const handleSignOut = async () => {
+      //       try {
+      //             await logout();
+      //             router.push('/')
+      //       } catch (e) {
+      //             console.log(e.message);
+      //       }
+      // };
 
       return (
             <div className='rounded-div flex items-center justify-between h-20 font-bold '>
@@ -88,11 +88,11 @@ const Navbar = () => {
                                           Home
                                     </Link>
                               </li>
-                              <li onClick={handleNav} className='border-b py-6'>
+                              {/* <li onClick={handleNav} className='border-b py-6'>
                                     <Link href="/">
                                           Account
                                     </Link>
-                              </li>
+                              </li> */}
                               <li className=' py-6'>
                                     <ThemeToggle />
                               </li>
