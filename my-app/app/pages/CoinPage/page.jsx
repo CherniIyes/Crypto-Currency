@@ -21,11 +21,15 @@ const CoinPage = () => {
       const url = `https://api.coingecko.com/api/v3/coins/${id}?localization=false&sparkline=true`;
 
       useEffect(() => {
-            axios.get(url).then((response) => {
-                  console.log("API Response:", response.data);
-                  setCoin(response.data);
-            });
-      }, [url]);
+            if (id) {
+                  axios.get(url).then((response) => {
+                        console.log("API Response:", response.data);
+                        setCoin(response.data);
+                  });
+            }
+      }, [id]);
+
+      if (!id) return <p>Loading...</p>;
 
 
 
