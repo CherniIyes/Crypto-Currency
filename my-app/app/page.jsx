@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
 import Home from "./pages/Home/page.jsx";

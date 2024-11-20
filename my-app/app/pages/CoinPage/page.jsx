@@ -34,7 +34,6 @@ const CoinPage = () => {
 
 
       return (
-            <Suspense >
 
                   <div className='rounded-div my-12 py-8'>
 
@@ -162,7 +161,6 @@ const CoinPage = () => {
                               <p className='text-center' dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(coin.description ? coin.description.en : ''), }} ></p>
                         </div>
                   </div >
-            </Suspense>
 
       )
 }
