@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 import { AiFillLock, AiOutlineLock, AiOutlineMail } from 'react-icons/ai'
-import { UserAuth } from "@context/AuthContext.jsx";
+// import { UserAuth } from "@context/AuthContext.jsx";
 import Link from 'next/link';
 const SingUp = () => {
       const [email, setEmail] = useState('');

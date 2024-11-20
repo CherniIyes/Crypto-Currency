@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { UserAuth } from "@context/AuthContext.jsx";
+// import { UserAuth } from "@context/AuthContext.jsx";
 import { useRouter } from 'next/navigation'
 
 const Navbar = () => {

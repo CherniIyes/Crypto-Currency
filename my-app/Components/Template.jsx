@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import { AiOutlineAim, AiOutlineStar } from 'react-icons/ai'
 import Link from 'next/link';
-import { UserAuth } from "@context/AuthContext.jsx";
+// import { UserAuth } from "@context/AuthContext.jsx";
 import { db } from '../firebase';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 
