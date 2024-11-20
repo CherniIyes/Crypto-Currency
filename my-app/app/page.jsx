@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import Image from "next/image";
 import axios from "axios";
 import Home from "./pages/Home/page.jsx";
@@ -22,10 +22,12 @@ export default function app() {
 
 
   return (
-    <ThemeProvider>
-      {/* <AuthContextProvider> */}
+    <Suspense fallback={<div>Loading...</div>}>
+      <ThemeProvider>
+        {/* <AuthContextProvider> */}
         <Home coins={coins} />
-      {/* </AuthContextProvider > */}
-    </ThemeProvider >
+        {/* </AuthContextProvider > */}
+      </ThemeProvider >
+    </Suspense>
   );
 }
