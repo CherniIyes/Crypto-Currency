@@ -1,6 +1,6 @@
 "use client"
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import { FaTwitter, FaFacebook, FaReddit, FaGithub } from 'react-icons/fa';
 import DOMPurify from 'dompurify'
@@ -28,9 +28,8 @@ const CoinPage = () => {
 
 
       return (
-            // <ThemeProvider>
-                  // <Navbar />
 
+            <Suspense fallback={<div>Loading...</div>}>
                   <div className='rounded-div my-12 py-8'>
 
                         <div className='flex py-8'>
@@ -157,9 +156,8 @@ const CoinPage = () => {
                               <p className='text-center' dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(coin.description ? coin.description.en : ''), }} ></p>
                         </div>
                   </div >
-                  // <Footer />
+            </Suspense>
 
-            // </ThemeProvider >
       )
 }
 
