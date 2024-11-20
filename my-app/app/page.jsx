@@ -22,7 +22,7 @@ export default function app() {
 
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense >
       <ThemeProvider>
         {/* <AuthContextProvider> */}
         <Home coins={coins} />
