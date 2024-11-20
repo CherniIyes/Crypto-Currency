@@ -17,13 +17,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Suspense >
-          <ThemeProvider>
-            <Navbar />
+        <ThemeProvider>
+          <Navbar />
+          <Suspense >
             {children}
-            <Footer />
-          </ThemeProvider>
-        </Suspense>
+          </Suspense>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html >
   );

@@ -22,12 +22,10 @@ export default function app() {
 
 
   return (
-    <Suspense >
       <ThemeProvider>
         {/* <AuthContextProvider> */}
         <Home coins={coins} />
         {/* </AuthContextProvider > */}
       </ThemeProvider >
-    </Suspense>
   );
 }
