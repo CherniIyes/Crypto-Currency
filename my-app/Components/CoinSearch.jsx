@@ -11,7 +11,7 @@ const CoinSearch = ({ coins }) => {
             <div className='rounded-div my-4'>
 
                   <div className='flex flex-col md:flex-row justify-between pt-4 pb-6 text-center md:text-right'>
-                        <h1 className='text-2xl font-bold my-2'>Search Flousy</h1>
+                        <h1 className='text-2xl font-bold my-2'>Search in Flousy-Byc</h1>
                         <form>
                               <input
                                     onChange={(e) => setSearchText(e.target.value)}

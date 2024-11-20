@@ -9,7 +9,7 @@ const SingUp = () => {
       const [password, setPassword] = useState('');
       const [error, setError] = useState('');
 
-      const signup = UserAuth();
+      // const signup = UserAuth();
       const router = useRouter();
       const handleSubmit = async (e) => {
             e.preventDefault()

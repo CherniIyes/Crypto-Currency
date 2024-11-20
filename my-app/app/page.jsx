@@ -23,9 +23,9 @@ export default function app() {
 
   return (
     <ThemeProvider>
-      <AuthContextProvider>
+      {/* <AuthContextProvider> */}
         <Home coins={coins} />
-      </AuthContextProvider >
+      {/* </AuthContextProvider > */}
     </ThemeProvider >
   );
 }

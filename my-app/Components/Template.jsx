@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import { AiOutlineAim, AiOutlineStar } from 'react-icons/ai'
 import Link from 'next/link';
@@ -8,9 +8,9 @@ import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 
 const Template = ({ coin }) => {
       const [savedCoin, setSavedCoin] = useState(false);
-      const { user } = UserAuth();
+      // const { user } = UserAuth();
 
-      const coinPath = doc(db, 'users', `${user?.email}`);
+      // const coinPath = doc(db, 'users', `${user?.email}`);
       const saveCoin = async () => {
             if (user?.email) {
                   setSavedCoin(true);

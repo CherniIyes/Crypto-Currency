@@ -20,19 +20,19 @@ const Footer = () => {
                               <div>
                                     <h2 className='font-bold'>Support</h2>
                                     <ul>
-                                          <li className='text-sm py-2'>Help Center</li>
-                                          <li className='text-sm py-2'>Contact Us</li>
-                                          <li className='text-sm py-2'>API Status</li>
-                                          <li className='text-sm py-2'>Documentation</li>
+                                          <li className='text-sm py-2 cursor-pointer'>Help Center</li>
+                                          <li className='text-sm py-2 cursor-pointer'>Contact Us</li>
+                                          <li className='text-sm py-2 cursor-pointer'>API Status</li>
+                                          <li className='text-sm py-2 cursor-pointer'>Documentation</li>
                                     </ul>
                               </div>
                               <div>
                                     <h2 className='font-bold'>Info</h2>
                                     <ul>
-                                          <li className='text-sm py-2'>About Us</li>
-                                          <li className='text-sm py-2'>Careers</li>
-                                          <li className='text-sm py-2'>Invest</li>
-                                          <li className='text-sm py-2'>Legal</li>
+                                          <li className='text-sm py-2 cursor-pointer'>About Us</li>
+                                          <li className='text-sm py-2 cursor-pointer'>Careers</li>
+                                          <li className='text-sm py-2 cursor-pointer'>Invest</li>
+                                          <li className='text-sm py-2 cursor-pointer'>Legal</li>
                                     </ul>
                               </div>
                         </div>
@@ -44,7 +44,7 @@ const Footer = () => {
                                           <div className='flex justify-center md:justify-end py-4 md:py-0 md:pb-4 mt-[-1rem]'>
                                                 <ThemeToggle />
                                           </div>
-                                          <p className='text-center md:text-right'>Sign up for crypto news</p>
+                                          <p className='text-center md:text-right cursor-default'>Sign up for crypto news</p>
                                           <div className='py-4'>
                                                 <form>
                                                       <input className='bg-primary border border-input p-2 mr-2 w-full shadow-xl rounded-2xl md:w-auto' type='email' placeholder='Enter your email' />
