@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from "react";
+import Template from "./Template";
 
 const CoinSearch = ({ coins = [] }) => {
       const [searchText, setSearchText] = useState('');
