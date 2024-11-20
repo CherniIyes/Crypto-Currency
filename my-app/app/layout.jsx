@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "@Components/Navbar";
 import Footer from "@Components/Fotter";
 import { ThemeProvider } from "@context/ThemeContext";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +17,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider>
+        <Suspense >
+          <ThemeProvider>
             <Navbar />
             {children}
             <Footer />
-        </ThemeProvider>
+          </ThemeProvider>
+        </Suspense>
       </body>
-    </html>
+    </html >
   );
 }
