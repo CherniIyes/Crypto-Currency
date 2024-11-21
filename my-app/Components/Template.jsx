@@ -5,6 +5,7 @@ import Link from 'next/link';
 // import { UserAuth } from "@context/AuthContext.jsx";
 import { db } from '../firebase';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
+import Image from "next/image";
 
 const Template = ({ coin }) => {
       const [savedCoin, setSavedCoin] = useState(false);
@@ -42,7 +43,12 @@ const Template = ({ coin }) => {
                         }}>
                               <div className='flex items-center'>
 
-                                    <img className='w-6 mr-2 rounded-full' src={coin.image} alt={coin.id} />
+                                    <Image className='w-6 mr-2 rounded-full' src={coin.image} alt={coin.id}
+                                          width={20}
+                                          height={20}
+                                          quality={70}
+                                          loading="lazy"
+                                    />
                                     <p className='hidden sm:table-cell'>{coin.name}</p>
                               </div>
                         </Link>

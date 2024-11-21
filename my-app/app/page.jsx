@@ -1,6 +1,5 @@
 "use client"
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import axios from "axios";
 import Home from "./pages/Home/page.jsx";
 import { AuthContextProvider } from "@context/AuthContext.jsx";
