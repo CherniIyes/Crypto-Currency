@@ -4,6 +4,7 @@ import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useRouter } from 'next/navigation'
+import "../Styles/globals.css";
 
 const Navbar = () => {
       const [nav, setNav] = useState(false);

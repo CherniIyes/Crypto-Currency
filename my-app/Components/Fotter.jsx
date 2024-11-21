@@ -8,6 +8,8 @@ import {
       FaTwitter,
 } from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
+import "../Styles/globals.css";
+
 
 const Footer = () => {
       return (
