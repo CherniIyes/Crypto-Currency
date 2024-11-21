@@ -67,9 +67,11 @@ const Template = ({ coin }) => {
                   </td>
                   <td className='w-[180px] hidden md:table-cell'>{coin.total_volume.toLocaleString()}</td>
                   <td className='w-[180px] hidden md:table-cell'>{coin.market_cap.toLocaleString()}</td>
-                  <Sparklines data={coin.sparkline_in_7d.price}>
-                        <SparklinesLine color='teal' />
-                  </Sparklines>
+                  <td>
+                        <Sparklines data={coin.sparkline_in_7d.price}>
+                              <SparklinesLine color='teal' />
+                        </Sparklines>
+                  </td>
             </tr >
 
 

@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Link from 'next/link';
 import ThemeToggle from './ThemeToggle';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-// import { UserAuth } from "@context/AuthContext.jsx";
 import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
@@ -14,52 +13,23 @@ const Navbar = () => {
       const handleNav = () => {
             setNav(!nav);
       };
-
-      // const handleSignOut = async () => {
-      //       try {
-      //             await logout();
-      //             router.push('/')
-      //       } catch (e) {
-      //             console.log(e.message);
-      //       }
-      // };
-
       return (
-            <div className='rounded-div flex items-center justify-between h-20 font-bold '>
-                  <Link href="/">
+            <div fillRule="evenodd" className='rounded-div flex items-center justify-between h-20 font-bold '>
+                  <Link fillRule="evenodd" href="/">
                         <h1 className='text-2xl'>Flousy-Byc</h1>
                   </Link>
 
 
 
-                  <div className='hidden md:block '>
+                  <div fillRule="evenodd" className='hidden md:block '>
                         <ThemeToggle />
                   </div>
-                  {/* {user?.email ? (
-                        <div>
-                              <Link href='/account' className='p-4'>
-                                    Account
-                              </Link>
-                              <button onClick={handleSignOut}>Sign out</button>
-                        </div>
-                  ) : (
-                        <div className='hidden md:block'>
-                              <Link href='/signin' className='p-4 hover:text-accent'>
-                                    Sign In
-                              </Link>
-                              <Link
-                                    to='/signup'
-                                    className='bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl'
-                              >
-                                    Sign Up
-                              </Link>
-                        </div>
-                  )} */}
-                  <div className='hidden md:block'>
-                        <Link href='/pages/SingIn' className='p-4 hover:text-accent'>
+
+                  <div fillRule="evenodd" className='hidden md:block'>
+                        <Link fillRule="evenodd" href='/pages/SingIn' className='p-4 hover:text-accent'>
                               Sign In
                         </Link>
-                        <Link
+                        <Link fillRule="evenodd"
                               href='/pages/SingUp'
                               className='bg-button text-btnText px-5 py-2 ml-2 rounded-2xl shadow-lg hover:shadow-2xl'
                         >
@@ -71,11 +41,11 @@ const Navbar = () => {
 
 
                   {/*  Mobile Menu */}
-                  <div onClick={handleNav} className='block md:hidden cursor-pointer z-10'>
-                        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+                  <div fillRule="evenodd" onClick={handleNav} className='block md:hidden cursor-pointer z-10'>
+                        {nav ? <AiOutlineClose fillRule="evenodd" size={20} /> : <AiOutlineMenu fillRule="evenodd" size={20} />}
                   </div>
 
-                  <div
+                  <div fillRule="evenodd"
                         className={
                               nav
                                     ? 'md:hidden fixed left-0 top-20 flex flex-col items-center justify-between w-full h-[93%] bg-primary ease-in duration-300 z-10'
@@ -84,7 +54,7 @@ const Navbar = () => {
                   >
                         <ul className='w-full p-4'>
                               <li onClick={handleNav} className='border-b py-6'>
-                                    <Link href="/">
+                                    <Link fillRule="evenodd" href="/">
                                           Home
                                     </Link>
                               </li>
@@ -97,11 +67,11 @@ const Navbar = () => {
                                     <ThemeToggle />
                               </li>
                         </ul>
-                        <div className='flex flex-col w-full p-4'>
-                              <Link href="/pages/SingIn">
+                        <div fillRule="evenodd" className='flex flex-col w-full p-4'>
+                              <Link fillRule="evenodd" href="/pages/SingIn">
                                     <button className='w-full my-2 p-3 bg-primaryy text-primary border border-secondary rounded-2xl shadow-xl'> Sing In</button>
                               </Link>
-                              <Link href="/pages/SingUp">
+                              <Link fillRule="evenodd" href="/pages/SingUp">
                                     <button className='w-full my-2 p-3 bg-button text-btnText rounded-2xl shadow-xl'>Sing Up</button>
                               </Link>
                         </div>
